@@ -12,9 +12,13 @@ void main() {
 
      String getNumber = number.substring(i, (i + 1));
 
+     sum += int.parse(getNumber);
+
   }
 
-  print(' is the total of $number');
+  print(sum);
+
+  //(' is the tot');
 
   
 
