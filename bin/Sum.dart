@@ -2,24 +2,22 @@ import 'dart:io';
 
 void main() {
   int  sum = 0;
- 
-
 
   stdout.write('Enter any Number: ');
-  String Number = stdin.readLineSync()!;
+  String number = stdin.readLineSync()!;
 
-  int n = Number.length;
+  int n = number.length;
 
   for (int i = 0; i <= (n - 1); i++) {
 
-     String getNumber = Number.substring(i, (i + 1));
+     String getNumber = number.substring(i, (i + 1));
 
-     print('$getNumber is the total of $Number');
   }
 
+  print(' is the total of $number');
 
-  //print(' is the total of $Number');
   
+
 }
 
 
