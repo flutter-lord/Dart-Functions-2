@@ -12,6 +12,6 @@ void numberOfWords(String word) {
   int count = newWord.length;
 
 
-   print('$word has $count');
+  print('$word has $count');
 
 }
