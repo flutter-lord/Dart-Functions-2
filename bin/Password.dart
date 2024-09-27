@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   stdout.write('Enter your password: ');
-  String password = stdin.readLineSync()!;
+  stdin.readLineSync()!;
 
   //int lengths = password.length;
   
