@@ -2,26 +2,29 @@ import 'dart:io';
 
 void main() {
 
-  stdout.write('Enter a word that contains E: ');
+  stdout.write('Enter a word: ');
   String word = stdin.readLineSync()!;
 
-  countWord(word);
+  stdout.write('Enter the character you wish to count: ');
+  String character = stdin.readLineSync()!;
+
+  countWord(word,character);
 
 }
-void countWord(String word) {
+void countWord(String word,String character) {
 
   int wordLength = word.length;
-  int countE = 0;
+  int countCharacter = 0;
 
-  for (int character = 0; character <= (wordLength); character++) {
-    int count = 0;
+  for (int i = 0; i <= (wordLength - 1); i++) {
 
-    String letters = word.substring(character, (character + 1));
-    count++;
+    String letter = word.toLowerCase().substring(i, (i + 1));
 
-    if (letters.compareTo('E') == 0|| letters.compareTo('e') == 0) {
-      countE++;
+    if (letter.compareTo(character.toLowerCase()) == 0) {
+      countCharacter++;
     }
+    
   }
-  print('In $word, E e appears $countE times');
+
+  print('In $word, $character appears $countCharacter times');
 }
