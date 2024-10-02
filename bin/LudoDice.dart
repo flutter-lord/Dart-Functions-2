@@ -12,7 +12,7 @@ void LudoGame(int random1, int random2) {
   int result = random1 + random2;
 
   if (result == 2 || result == 3 || result == 12) {
-    print('You rolled ${random1 +random2} = ${result}\nYou Lose');
+    print('You rolled $random1 + $random2 = $result\nYou Lose');
   }
   else if (result == 7 || result == 11) {
     print('You rolled $random1 + $random2 = $result\nYou Won');
