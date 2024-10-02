@@ -2,7 +2,7 @@ import 'PaliddromePrime.dart';
 
 void main() {
 
-  for (int i = 1, j = i + 2; j <= 1000; j++,i++) {
+  for (int i = 2, j = i + 2; j <= 1000; j++,i++) {
 
     twinsPrime(i, j);  
   } 
