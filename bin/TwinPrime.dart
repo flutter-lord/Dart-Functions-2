@@ -9,10 +9,10 @@ void main() {
 }
 void twinsPrime(int i, int j) {
 
-  bool prime = isPrime(i);
+  bool firstPrime = isPrime(i);
   bool secondPrime = isPrime(j);
 
- if (prime == true && secondPrime == true) {
+ if (firstPrime == true && secondPrime == true) {
   print('($i, ${j})');
  }
 }
