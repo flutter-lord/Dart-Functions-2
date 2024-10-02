@@ -34,10 +34,7 @@ void LudoGame(int random1, int random2) {
     else if (sum == result) {
       print('You rolled $random3 + $random4 = $sum\nYou Won');
     }
-    else {
-      while (sum != result) {
-        print('You rolled $random3 + $random4 = $sum');
-      }
-    }
   }
+    
+  
 } 
