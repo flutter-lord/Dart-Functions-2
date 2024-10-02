@@ -11,7 +11,7 @@ void main() {
 }
 
 void LudoGame(int random1, int random2) {
-  
+
   int result = random1 + random2;
 
   if (result == 2 || result == 3 || result == 12) {
@@ -35,8 +35,9 @@ void LudoGame(int random1, int random2) {
       print('You rolled $random3 + $random4 = $sum\nYou Won');
     }
     else {
-
+      while (sum != result) {
+        print('You rolled $random3 + $random4 = $sum');
+      }
     }
-    
   }
 } 
