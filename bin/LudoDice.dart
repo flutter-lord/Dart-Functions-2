@@ -18,11 +18,18 @@ void LudoGame(int random1, int random2) {
     print('You rolled $random1 + $random2 = $result\nYou Won');
   }
   else {
-    if (result == 7)  {
-      print('You rolled $random1 + $random2 = $result\nPoint is $result\nYou lose');
+    print('You rolled $random1 + $random2 = $result\nPoint is $result');
+
+    int random3 = Random().nextInt(6) + 1;
+    int random4 = Random().nextInt(6) + 1;
+
+    int sum = random3 + random4;
+
+    if (sum == 7)  {
+      print('You rolled $random3 + $random4 = $sum\nYou Lose');
     }
     else {
-      print('You rolled $random1 + $random2 = $result\nPoint is $result\nYou Won');
+      print('You rolled $random3 + $random4 = $sum\nYou Won');
     }
   }
 } 
