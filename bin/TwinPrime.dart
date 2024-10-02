@@ -7,6 +7,7 @@ void main() {
     twinsPrime(i, j);  
   } 
 }
+
 void twinsPrime(int i, int j) {
 
   bool firstPrime = isPrime(i);
