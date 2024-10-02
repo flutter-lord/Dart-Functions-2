@@ -1,6 +1,7 @@
 import 'dart:math';
 
 void main() {
+
   int random1 = Random().nextInt(6) + 1;
 
   int random2 = Random().nextInt(6) + 1;
@@ -8,7 +9,9 @@ void main() {
   LudoGame(random1, random2);
 
 }
+
 void LudoGame(int random1, int random2) {
+  
   int result = random1 + random2;
 
   if (result == 2 || result == 3 || result == 12) {
@@ -28,8 +31,12 @@ void LudoGame(int random1, int random2) {
     if (sum == 7)  {
       print('You rolled $random3 + $random4 = $sum\nYou Lose');
     }
-    else {
+    else if (sum == result) {
       print('You rolled $random3 + $random4 = $sum\nYou Won');
     }
+    else {
+
+    }
+    
   }
 } 
