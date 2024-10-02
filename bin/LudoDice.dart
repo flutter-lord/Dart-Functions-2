@@ -19,10 +19,10 @@ void LudoGame(int random1, int random2) {
   }
   else {
     if (result == 7)  {
-      print('You lose');
+      print('Continue to roll\nYou lose');
     }
     else {
-      print('You Won');
+      print('Continue to roll\nYou Won');
     }
   }
 } 
