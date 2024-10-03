@@ -4,36 +4,66 @@ void main() {
   stdout.write('Enter Your Credit card Number: ');
   String digit = stdin.readLineSync()!;
 
-  int digitLength = digit.length;
+  int cardNumber = firstCategoryNumber(digit) + secondCategoryNumber(digit);
 
-  for (int i = digitLength - 2, j = i + 1; j <= 1; i -= 2,) {
-  } 
-
+  if (cardNumber % 10 == 0) {
+    print('Your Credit card number is Valid');
+  }
+  else {
+    print('Your Credit card number is Invalid');
+  }
 }
 
-bool creditCardNumber(String digit,int i, int j) {
+int firstCategoryNumber(String digit) {
+
+  int digitLength = digit.length - 1;
+
   int sum = 0;
-  
-  String firstcategory = digit.substring(i, j);
 
-  int number = int.parse(firstcategory);
+  for (int i = digitLength - 1; i >= 0; i -= 2) {
 
-  int doubleNumber = 2 * number;
+   String firstcategory = digit.substring(i, i + 1);
+    
+   int number = int.parse(firstcategory);
 
-  if (doubleNumber >= 10 && doubleNumber <= 18) {
+   int doubleNumber = 2 * number;
 
-    String value = doubleNumber.toString();
+   if (doubleNumber >= 10) {
 
-    String newValue1 = value.substring(0, 1);
-    String newValue2 = value.substring(1, 2);
+     String value = doubleNumber.toString();
 
-    int numb1 = int.parse(newValue1);
-    int numb2 = int.parse(newValue2);
+     String newValue1 = value.substring(0, 1);
+     String newValue2 = value.substring(1, 2);
 
-    int addNum = numb1 + numb2;
+     int numb1 = int.parse(newValue1);
+     int numb2 = int.parse(newValue2);
 
+     int addNum = numb1 + numb2;
 
-    sum += doubleNumber + addNum;
+     sum += addNum;   
+   }
+   else {
+
+    sum += doubleNumber;
+
+   }   
+  } 
+  return sum;
+}
+
+int secondCategoryNumber(String digit) {
+
+  int digitLength = digit.length - 1;
+
+  int sum = 0;
+
+  for (int i = digitLength; i >= 1; i -= 2) {
+
+    String secondCategory = digit.substring(i, i + 1);
+    
+    int number = int.parse(secondCategory);
+
+    sum += number;
   }
-  
+  return sum;
 }
