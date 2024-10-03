@@ -67,6 +67,6 @@ int secondCategoryNumber(String digit) {
 
     sum += number;
   }
-  
+
   return sum;
 }
