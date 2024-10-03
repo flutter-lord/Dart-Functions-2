@@ -15,19 +15,24 @@ void main() {
 void TotalNumber (String integer, int value) {
 
   int integerLength = integer.length;
-  int addZeros = value - integerLength;
 
-  String a = '0';
-
-  for (int i = 1; i < addZeros; i++) {
-    stdout.write(a);
+  if (value <= integerLength) {
+    print(integer);
   }
 
-  String b = '';
+  else {
+   int addZeros = value - integerLength;
+  
+   String a = '0';
+   String b = '';
 
-  b += a;
+   for (int i = 1; i <= addZeros; i++) {
+     stdout.write(a);
+   }
 
-  String number = b + integer;
+   String number = b + integer;
 
-  print(number);
+   print(number);
+  }
+
 }
