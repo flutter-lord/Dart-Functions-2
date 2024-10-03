@@ -9,9 +9,11 @@ void main() {
   if (cardNumber % 10 == 0) {
     print('Your Credit card number is Valid');
   }
+
   else {
     print('Your Credit card number is Invalid');
   }
+
 }
 
 int firstCategoryNumber(String digit) {
@@ -43,11 +45,11 @@ int firstCategoryNumber(String digit) {
      sum += addNum;   
    }
    else {
-
     sum += doubleNumber;
+   }
 
-   }   
-  } 
+  }
+
   return sum;
 }
 
@@ -65,5 +67,6 @@ int secondCategoryNumber(String digit) {
 
     sum += number;
   }
+  
   return sum;
 }
